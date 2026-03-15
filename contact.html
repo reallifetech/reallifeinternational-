@@ -5,7 +5,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Real Life International</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#ffffff;
+    line-height:1.7;
+}
+
+/* HEADER */
+header{
+    background:#b30000;
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+nav{
+    background:#000;
+    padding:12px 0;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ff3333;
+}
+
+/* CONTACT SECTION */
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+}
+
+h2{
+    color:#b30000;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:4px;
+    font-size:16px;
+}
+
+button{
+    background:#b30000;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:16px;
+}
+
+button:hover{
+    background:#ff3333;
+}
+
+/* STATUS MESSAGE */
+#status{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+</style>
+
 </head>
 
 <body>
@@ -17,23 +100,50 @@
 <a href="about.html">About</a>
 <a href="news.html">News</a>
 <a href="contact.html">Contact</a>
+<a href="history.html">History</a>
 </nav>
 </header>
 
-<section>
+<div class="container">
 <h2>Contact Us</h2>
-<p>For news tips, collaborations, or inquiries, contact us below.</p>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message"></textarea>
+<p>Send a message to the Real Life International team. We welcome news tips, questions, feedback, and partnership inquiries.</p>
+
+<form id="contact-form">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 <button type="submit">Send Message</button>
 </form>
-</section>
+
+<p id="status"></p>
+</div>
 
 <footer>
 <p>© 2026 Real Life International</p>
 </footer>
+
+<!-- EMAILJS SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("3HCGuSko3_Y9VDaW7"); // Your Public Key
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    emailjs.sendForm(
+        'service_agkjo4e',      // Your Service ID
+        'template_benboc5',     // Your Template ID
+        this
+    )
+    .then(function(){
+        document.getElementById("status").innerHTML = "✅ Message sent successfully!";
+    }, function(error){
+        document.getElementById("status").innerHTML = "❌ Failed to send message: " + JSON.stringify(error);
+    });
+});
+</script>
 
 </body>
 </html>

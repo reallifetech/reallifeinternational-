@@ -1,43 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Real Life International</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<title>Real Life International</title><style>
 
-<body>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#ffffff;
+line-height:1.7;
+}
 
-<header>
-<h1>Real Life International</h1>
-<nav>
+/* HEADER */
+
+header{
+background:#b30000;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+nav{
+background:#000000;
+padding:12px 0;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff3333;
+text-decoration:underline;
+}
+
+/* BREAKING NEWS */
+
+.breaking-news{
+background:#b30000;
+color:white;
+padding:8px;
+font-weight:bold;
+}
+
+.breaking-news .label{
+margin-right:10px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:40px 20px;
+background:#f5f5f5;
+}
+
+.hero h2{
+color:#b30000;
+}
+
+/* ABOUT */
+
+.about-section{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.about-section h2{
+color:#b30000;
+}
+
+/* FACEBOOK */
+
+.facebook-news{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.facebook-news h2{
+color:#b30000;
+}
+
+/* HISTORY ARTICLES */
+
+.history-section{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.history-section h2{
+color:#b30000;
+}
+
+.article{
+margin-bottom:20px;
+padding-bottom:15px;
+border-bottom:1px solid #ddd;
+}
+
+.article a{
+color:#b30000;
+font-weight:bold;
+text-decoration:none;
+}
+
+.article a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+background:#000000;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+</style></head><body><header>
+<h1>Real Life International</h1><nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="news.html">News</a>
 <a href="contact.html">Contact</a>
-</nav>
-</header>
+<a href="history.html">History</a>
+</nav></header><!-- BREAKING NEWS --><div class="breaking-news"><span class="label">BREAKING NEWS</span>
 
-<!-- Breaking News Ticker -->
-<div class="breaking-news">
-<span class="label">BREAKING NEWS</span>
-<marquee>
-Iran-Israel tensions escalate • Global oil prices react • Africa economic outlook improves • Technology race intensifies • Real Life International reports live updates
-</marquee>
-</div>
+<marquee>Iran-Israel tensions escalate • Global oil prices react • Africa economic outlook improves • Technology race intensifies • Real Life International reports live updates
 
-<!-- Hero Section -->
-<section class="hero">
-<h2>Global News and Analysis</h2>
-<p>Real Life International reports local and international events, political developments, conflicts, and major stories shaping our world.</p>
-</section>
-
-<!-- Facebook News Feed -->
-<section class="facebook-news">
-<h2>Latest News From Our Facebook Page</h2>
-<div class="fb-page"
+</marquee></div><!-- HERO --><section class="hero"><h2>Global News and Analysis</h2><p>
+Real Life International reports local and international events, political developments,
+conflicts, and major stories shaping our world.
+</p></section><!-- ABOUT REAL LIFE INTERNATIONAL --><section class="about-section"><h2>About Real Life International</h2><p>
+Real Life International is a global news and information platform dedicated to
+reporting major world events, political developments, economic trends,
+technological progress, and historical events that have shaped our world.
+</p><p>
+Our goal is to provide readers with reliable information and clear understanding
+of the global forces that influence nations and societies. We combine news,
+analysis, and historical education to help readers stay informed about both
+current events and the past events that explain today's world.
+</p><p>
+In addition to breaking news, Real Life International explores major historical
+moments such as the World Wars, the American Revolution, and other global
+conflicts and turning points that changed history. Through detailed articles
+and educational content, our platform helps readers understand the deeper
+context behind major global developments.
+</p><p>
+Real Life International believes that knowledge empowers people. By providing
+accurate reporting, thoughtful analysis, and historical insight, we aim to
+inform, educate, and inspire readers across the world.
+</p></section><!-- FACEBOOK NEWS FEED --><section class="facebook-news"><h2>Latest News</h2><div class="fb-page"
 data-href="https://www.facebook.com/RealLifeinternational"
 data-tabs="timeline"
 data-width="500"
@@ -46,17 +166,25 @@ data-small-header="false"
 data-adapt-container-width="true"
 data-hide-cover="false"
 data-show-facepile="true">
-</div>
-</section>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
+</div></section><div id="fb-root"></div><script async defer crossorigin="anonymous"
 src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
-</script>
+</script><!-- HISTORY ARTICLES --><section class="history-section"><h2>History Articles</h2><div class="article"><a href="articles/history-world-war-1.html">World War I – How the Great War Began and Ended</a>
 
-<footer>
-<p>© 2026 Real Life International</p>
-</footer>
+<p>
+World War I began in 1914 after the assassination of Archduke Franz Ferdinand.
+The conflict involved major world powers and lasted until 1918,
+reshaping Europe and the global political order.
+</p></div><div class="article"><a href="articles/history-world-war-2.html">World War II – The Largest Conflict in Human History</a>
 
-</body>
+<p>
+World War II began in 1939 when Germany invaded Poland.
+The war involved nations across the globe and ended in 1945
+after the defeat of Nazi Germany and Imperial Japan.
+</p></div><div class="article"><a href="articles/history-american-revolution.html">American Revolution – The Birth of the United States</a>
+
+<p>
+The American Revolution (1775-1783) was the struggle of the
+thirteen American colonies to gain independence from Britain,
+leading to the creation of the United States of America.
+</p></div></section><footer><p>© 2026 Real Life International</p></footer></body>
 </html>

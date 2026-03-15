@@ -4,8 +4,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Real Life International</title>
+<title>Real Life International</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* RED & BLACK THEME */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  line-height: 1.7;
+  color: #000;
+}
+
+header {
+  background: #b30000;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+nav {
+  background: #000;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff3333;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #b30000;
+  margin-top: 30px;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #000;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.read-btn, button {
+  background: #b30000;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.read-btn:hover, button:hover {
+  background: #ff3333;
+}
+
+/* History Articles Section */
+.history-articles {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.article-card img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.article-content h3 {
+  margin-top: 0;
+  color: #b30000;
+}
+
+/* Facebook & TikTok Sections */
+.facebook-news, .tiktok-posts {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.facebook-news h2, .tiktok-posts h2 {
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.about-section h2 {
+  color: #b30000;
+  margin-bottom: 15px;
+}
+</style>
 </head>
 
 <body>
@@ -17,16 +146,103 @@
 <a href="about.html">About</a>
 <a href="news.html">News</a>
 <a href="contact.html">Contact</a>
+<a href="history.html">History</a>
 </nav>
 </header>
 
-<section>
-<h2>About Real Life International</h2>
-<p>Real Life International is an independent journalism platform dedicated to reporting important events happening around the world.</p>
-<p>Our mission is to provide updates on global news, African developments, political events, and international affairs.</p>
-<p>We share stories that help readers understand the world and stay informed about both local and international events.</p>
-<p>Founder: Tovyahu</p>
+<!-- Breaking News Ticker -->
+<div class="breaking-news">
+<span class="label">BREAKING NEWS</span>
+<marquee>
+Iran-Israel tensions escalate • Global oil prices react • Africa economic outlook improves • Technology race intensifies • Real Life International reports live updates
+</marquee>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+<h2>Global News and Analysis</h2>
+<p>Real Life International reports local and international events, political developments, conflicts, and major stories shaping our world.</p>
 </section>
+
+<!-- About Real Life International -->
+<section class="about-section">
+<h2>About Real Life International</h2>
+<p><strong>Real Life International</strong> is a dedicated global media platform committed to delivering accurate, timely, and insightful news, reports, and historical content to readers around the world. Our mission is to educate, inform, and inspire by bringing together local and international events in a clear and engaging way.</p>
+
+<p>From breaking political developments and international conflicts to cultural events and technological breakthroughs, we provide a comprehensive overview of the news shaping our modern world. We also explore history deeply, presenting detailed articles on major events such as the World Wars, the American Revolution, and other pivotal moments in global history.</p>
+
+<p>At Real Life International, we believe in the power of knowledge. Our team of writers and contributors carefully researches each story, providing readers with not only the facts but also the context needed to understand the bigger picture. We combine text, images, and multimedia, including Facebook and TikTok feeds, to create an immersive experience for every visitor.</p>
+
+<p>Whether you are a student, professional, history enthusiast, or casual reader, Real Life International strives to be your trusted source for reliable information and engaging storytelling. We value accuracy, integrity, and transparency, ensuring that every article you read on our platform is backed by thorough research and verified sources.</p>
+
+<p>Join us as we explore the world’s events, uncover fascinating history, and bring you stories that matter, helping you stay informed, inspired, and connected.</p>
+</section>
+
+<!-- Facebook News Feed -->
+<section class="facebook-news">
+<h2>Latest Facebook News</h2>
+<div class="fb-page"
+data-href="https://www.facebook.com/RealLifeinternational"
+data-tabs="timeline"
+data-width="500"
+data-height="700"
+data-small-header="false"
+data-adapt-container-width="true"
+data-hide-cover="false"
+data-show-facepile="true">
+</div>
+</section>
+
+<!-- TikTok Embed -->
+<section class="tiktok-posts">
+<h2>Latest TikTok</h2>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@reallifeinternational/video/1234567890123456789" 
+    data-video-id="1234567890123456789" style="max-width: 605px;min-width: 325px;" >
+    <section> </section>
+</blockquote>
+<script async src="https://www.tiktok.com/embed.js"></script>
+</section>
+
+<!-- History Articles Section -->
+<section class="history-articles">
+<h2>Featured History Articles</h2>
+
+<!-- World War I -->
+<div class="article-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/WWI_Trench.jpg" alt="World War I">
+<div class="article-content">
+<h3><a href="articles/history-world-war-1.html" style="color:#b30000;text-decoration:none;">World War I</a></h3>
+<p>One of the deadliest conflicts in history, starting in 1914 after the assassination of Archduke Franz Ferdinand...</p>
+<a class="read-btn" href="articles/history-world-war-1.html">Read Full Story</a>
+</div>
+</div>
+
+<!-- World War II -->
+<div class="article-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Bundesarchiv_Bild_183-R76619%2C_Russland%2C_Kriegsschauplatz.jpg" alt="World War II">
+<div class="article-content">
+<h3><a href="articles/history-world-war-2.html" style="color:#b30000;text-decoration:none;">World War II</a></h3>
+<p>The largest war in history, from 1939 to 1945, involving most of the world...</p>
+<a class="read-btn" href="articles/history-world-war-2.html">Read Full Story</a>
+</div>
+</div>
+
+<!-- American Revolution -->
+<div class="article-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Signing_of_the_Declaration_of_Independence.jpg" alt="American Revolution">
+<div class="article-content">
+<h3><a href="articles/history-american-revolution.html" style="color:#b30000;text-decoration:none;">American Revolution</a></h3>
+<p>The struggle for independence that created the United States of America, starting in 1775...</p>
+<a class="read-btn" href="articles/history-american-revolution.html">Read Full Story</a>
+</div>
+</div>
+
+</section>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
+</script>
 
 <footer>
 <p>© 2026 Real Life International</p>
