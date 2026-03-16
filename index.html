@@ -1,288 +1,108 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Real Life International</title><style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Life International</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#111;color:white;}
+header{background:black;color:red;padding:25px;text-align:center;}
+nav{background:red;padding:12px;text-align:center;}
+nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+.breaking-news{background:#cc0000;color:white;padding:10px;font-weight:bold;}
+.hero{padding:30px;text-align:center;}
+.hero h2{color:red;margin-bottom:10px;}
+.hero p{max-width:800px;margin:auto;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px;max-width:1100px;margin:auto;}
+.card{background:#1a1a1a;border-radius:6px;overflow:hidden;}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card h3{color:red;padding:10px;}
+.card p{padding:0 10px 10px;}
+.card a{display:block;background:red;color:white;text-align:center;padding:10px;text-decoration:none;}
+.card a:hover{background:#b30000;}
+footer{background:black;color:red;text-align:center;padding:25px;margin-top:40px;}
+</style>
+</head>
+<body>
 
-body{
-font-family:Arial;
-margin:0;
-background:#111;
-color:white;
-}
-
-/* HEADER */
-
-header{
-background:black;
-color:red;
-text-align:center;
-padding:25px;
-}
-
-nav{
-background:red;
-padding:12px;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
-}
-
-nav a:hover{
-text-decoration:underline;
-}
-
-/* BREAKING NEWS */
-
-.breaking{
-background:#cc0000;
-color:white;
-padding:10px;
-font-weight:bold;
-text-align:center;
-}
-
-/* SEARCH */
-
-.search{
-text-align:center;
-margin:20px;
-}
-
-.search input{
-padding:10px;
-width:80%;
-max-width:400px;
-border:none;
-border-radius:5px;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
-max-width:1100px;
-margin:auto;
-}
-
-.card{
-background:#1a1a1a;
-border-radius:6px;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.card h3{
-color:red;
-padding:10px;
-}
-
-.card p{
-padding:0 10px 10px;
-}
-
-.card a{
-display:block;
-background:red;
-color:white;
-text-align:center;
-padding:10px;
-text-decoration:none;
-}
-
-.card a:hover{
-background:#cc0000;
-}
-
-/* POPULAR */
-
-.popular{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
-
-.popular h2{
-color:red;
-text-align:center;
-}
-
-.popular ul{
-list-style:none;
-padding:0;
-}
-
-.popular li{
-padding:8px;
-border-bottom:1px solid #333;
-}
-
-.popular a{
-color:white;
-text-decoration:none;
-}
-
-.popular a:hover{
-color:red;
-}
-
-footer{
-background:black;
-color:red;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-</style></head><body><header><h1>Real Life International</h1><nav>
+<header>
+<h1>Real Life International</h1>
+<nav>
 <a href="index.html">Home</a>
-<a href="history.html">History</a>
-<a href="news.html">News</a>
 <a href="about.html">About</a>
+<a href="news.html">News</a>
 <a href="contact.html">Contact</a>
-</nav></header><!-- BREAKING NEWS --><div class="breaking"><span id="breakingNews"></span>
+<a href="history.html">History</a>
+</nav>
+</header>
 
-</div><!-- SEARCH --><div class="search"><input type="text" id="searchInput" placeholder="Search articles..."></div><!-- ARTICLES --><div class="grid" id="articles-grid"></div><!-- POPULAR --><div class="popular"><h2>Most Popular Articles</h2><ul id="popular-list"></ul></div><!-- FACEBOOK FEED --><div style="max-width:1100px;margin:auto;padding:20px"><h2 style="color:red;text-align:center">Latest From Facebook</h2><div style="display:flex;justify-content:center"><iframe 
-src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/reallifeinternational&tabs=timeline&width=500&height=600"
-width="500"
-height="600"
-style="border:none;overflow:hidden"
-scrolling="no"
-frameborder="0">
-</iframe></div></div><!-- TIKTOK --><div style="max-width:1100px;margin:auto;padding:20px"><h2 style="color:red;text-align:center">Latest TikTok Videos</h2><blockquote 
-class="tiktok-embed"
-cite="https://www.tiktok.com/@reallifeinternational"
-data-unique-id="reallifeinternational"
-data-embed-type="creator"
-style="max-width:780px; min-width:288px;margin:auto;">
-</blockquote><script async src="https://www.tiktok.com/embed.js"></script></div><!-- GLOBAL CONFLICT TRACKER --><div style="max-width:1100px;margin:auto;padding:20px"><h2 style="color:red;text-align:center">Global Conflict Tracker</h2><ul style="line-height:2"><li>Middle East tensions continue between Iran and Israel</li><li>Russia–Ukraine conflict ongoing in Eastern Europe</li><li>Military alliances increasing around the Strait of Hormuz</li><li>Global powers strengthening defense partnerships</li></ul></div><!-- VISITOR COUNTER --><div style="text-align:center;padding:20px"><h3 style="color:red">Website Visitors</h3><img src="https://hitwebcounter.com/counter/counter.php?page=10692874&style=0036&nbdigits=6&type=page&initCount=0" /></div><footer><h3>Real Life International</h3><p>Global News • History • Analysis</p><p>Follow us</p><p>TikTok: @reallifeinternational
-Facebook: Real Life International
+<!-- BREAKING NEWS TICKER -->
+<div class="breaking-news">
+<marquee behavior="scroll" direction="left" scrollamount="6">
+Iran-Israel tensions escalate • Global oil prices react • Africa economic outlook improves • Technology race intensifies • Real Life International reports live updates
+</marquee>
+</div>
 
-</p><p>© 2026 Real Life International</p></footer><script>
+<!-- HERO SECTION -->
+<section class="hero">
+<h2>Global News and Analysis</h2>
+<p>Real Life International reports local and international events, political developments, conflicts, and major stories shaping our world.</p>
+</section>
 
-/* BREAKING NEWS */
+<!-- ARTICLES GRID -->
+<div class="grid" id="articles-grid"></div>
 
-const news = [
+<!-- FACEBOOK NEWS FEED -->
+<section class="facebook-news">
+<h2 style="text-align:center;color:red;">Latest News from Facebook</h2>
+<div class="fb-page"
+data-href="https://www.facebook.com/RealLifeinternational"
+data-tabs="timeline"
+data-width="500"
+data-height="700"
+data-small-header="false"
+data-adapt-container-width="true"
+data-hide-cover="false"
+data-show-facepile="true">
+</div>
+</section>
 
-"US preparing coalition to escort ships through Strait of Hormuz",
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
+</script>
 
-"Iran launches Sejjil missile for first time in conflict",
-
-"Global tensions rising across the Middle East",
-
-"International leaders calling for urgent diplomacy"
-
-]
-
-let i = 0
-
-function rotateNews(){
-
-document.getElementById("breakingNews").innerText = news[i]
-
-i++
-
-if(i >= news.length){i = 0}
-
-}
-
-rotateNews()
-
-setInterval(rotateNews,5000)
-
-/* LOAD ARTICLES */
-
-let allArticles=[]
-
+<!-- LOAD ARTICLES -->
+<script>
+let allArticles = [];
 fetch('articles.json')
-
-.then(res=>res.json())
-
-.then(data=>{
-
-allArticles=data
-
-displayArticles(data)
-
-displayPopular(data)
-
+.then(res => res.json())
+.then(data => {
+    allArticles = data;
+    displayArticles(data);
 })
-
 function displayArticles(articles){
-
-const grid=document.getElementById('articles-grid')
-
-grid.innerHTML=""
-
-articles.forEach(article=>{
-
-const card=document.createElement('div')
-
-card.className="card"
-
-card.innerHTML=`
-
-<img src="${article.image}">
-
-<h3>${article.title}</h3>
-
-<p>${article.description}</p>
-
-<a href="${article.link}">Read Full Story</a>
-
-`
-
-grid.appendChild(card)
-
-})
-
+    const grid = document.getElementById('articles-grid');
+    grid.innerHTML = '';
+    articles.forEach(article => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+        <img src="${article.image}" alt="${article.title}">
+        <h3>${article.title}</h3>
+        <p>${article.description}</p>
+        <a href="${article.link}">Read Full Story</a>
+        `;
+        grid.appendChild(card);
+    });
 }
+</script>
 
-/* SEARCH */
+<footer>
+<p>© 2026 Real Life International</p>
+</footer>
 
-document.getElementById('searchInput').addEventListener('input',function(){
-
-const search=this.value.toLowerCase()
-
-const filtered=allArticles.filter(article=>
-
-article.title.toLowerCase().includes(search) ||
-
-article.description.toLowerCase().includes(search)
-
-)
-
-displayArticles(filtered)
-
-})
-
-/* POPULAR */
-
-function displayPopular(articles){
-
-const list=document.getElementById('popular-list')
-
-articles.slice(0,5).forEach(article=>{
-
-const li=document.createElement('li')
-
-li.innerHTML=`<a href="${article.link}">${article.title}</a>`
-
-list.appendChild(li)
-
-})
-
-}
-
-</script></body>
+</body>
 </html>
