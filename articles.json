@@ -1,0 +1,26 @@
+[
+  {
+    "title": "World War I – The Great War",
+    "description": "Discover the causes, battles, and aftermath of the First World War, which reshaped Europe and the world.",
+    "image": "images/world-war-1.jpg",
+    "link": "articles/history-world-war-1.html"
+  },
+  {
+    "title": "World War II – The Deadliest War",
+    "description": "Learn about the rise of Nazi Germany, the global conflict, and how the world was forever changed by World War II.",
+    "image": "images/world-war-2.jpg",
+    "link": "articles/history-world-war-2.html"
+  },
+  {
+    "title": "The American Revolution",
+    "description": "Explore how thirteen colonies fought for independence from Britain and the birth of a new nation.",
+    "image": "images/american-revolution.jpg",
+    "link": "articles/history-american-revolution.html"
+  },
+  {
+    "title": "Iran–Israel Conflict",
+    "description": "Understand the ongoing tensions, historical background, and current situation between Iran and Israel.",
+    "image": "images/iran-israel-war.jpg",
+    "link": "articles/iran-israel-war.html"
+  }
+]

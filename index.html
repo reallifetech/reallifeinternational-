@@ -1,163 +1,98 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Real Life International</title><style>
+<title>Real Life International</title>
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#ffffff;
-line-height:1.7;
-}
+<style>
+body {font-family: Arial, sans-serif; margin:0; background:#111; color:white; line-height:1.7;}
+header {background:black; padding:25px; text-align:center; color:red;}
+nav {background:red; padding:12px; text-align:center;}
+nav a {color:white; text-decoration:none; margin:0 15px; font-weight:bold;}
+nav a:hover {text-decoration:underline;}
+.container {max-width:1100px; margin:auto; padding:20px;}
+h1, h2 {color:red;}
+.hero {text-align:center; margin-top:20px;}
+.hero p {font-size:1.1em;}
+.grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; margin-top:30px;}
+.card {background:#1a1a1a; padding:15px; border-left:5px solid red; border-radius:6px;}
+.card img {width:100%; border-radius:6px;}
+.card h3 {color:red; margin-top:10px;}
+.card p {margin:10px 0;}
+.card a {color:white; font-weight:bold; text-decoration:none;}
+.card a:hover {color:red;}
+.breaking-news {background:red; color:white; padding:10px; text-align:center; margin-top:10px;}
+footer {background:black; color:red; text-align:center; padding:20px; margin-top:40px;}
+</style>
 
-/* HEADER */
+</head>
+<body>
 
-header{
-background:#b30000;
-color:white;
-padding:25px;
-text-align:center;
-}
-
-nav{
-background:#000000;
-padding:12px 0;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#ff3333;
-text-decoration:underline;
-}
-
-/* BREAKING NEWS */
-
-.breaking-news{
-background:#b30000;
-color:white;
-padding:8px;
-font-weight:bold;
-}
-
-.breaking-news .label{
-margin-right:10px;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:40px 20px;
-background:#f5f5f5;
-}
-
-.hero h2{
-color:#b30000;
-}
-
-/* ABOUT */
-
-.about-section{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-.about-section h2{
-color:#b30000;
-}
-
-/* FACEBOOK */
-
-.facebook-news{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-.facebook-news h2{
-color:#b30000;
-}
-
-/* HISTORY ARTICLES */
-
-.history-section{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-.history-section h2{
-color:#b30000;
-}
-
-.article{
-margin-bottom:20px;
-padding-bottom:15px;
-border-bottom:1px solid #ddd;
-}
-
-.article a{
-color:#b30000;
-font-weight:bold;
-text-decoration:none;
-}
-
-.article a:hover{
-text-decoration:underline;
-}
-
-/* FOOTER */
-
-footer{
-background:#000000;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-}
-
-</style></head><body><header>
-<h1>Real Life International</h1><nav>
+<header>
+<h1>Real Life International</h1>
+<nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="news.html">News</a>
 <a href="contact.html">Contact</a>
 <a href="history.html">History</a>
-</nav></header><!-- BREAKING NEWS --><div class="breaking-news"><span class="label">BREAKING NEWS</span>
+</nav>
+</header>
 
-<marquee>Iran-Israel tensions escalate • Global oil prices react • Africa economic outlook improves • Technology race intensifies • Real Life International reports live updates
+<!-- Breaking News Ticker -->
+<div class="breaking-news">
+<span>BREAKING NEWS: </span>
+<marquee>
+Iran-Israel tensions escalate • Global oil prices react • Africa economic outlook improves • Technology race intensifies • Real Life International reports live updates
+</marquee>
+</div>
 
-</marquee></div><!-- HERO --><section class="hero"><h2>Global News and Analysis</h2><p>
-Real Life International reports local and international events, political developments,
-conflicts, and major stories shaping our world.
-</p></section><!-- ABOUT REAL LIFE INTERNATIONAL --><section class="about-section"><h2>About Real Life International</h2><p>
-Real Life International is a global news and information platform dedicated to
-reporting major world events, political developments, economic trends,
-technological progress, and historical events that have shaped our world.
-</p><p>
-Our goal is to provide readers with reliable information and clear understanding
-of the global forces that influence nations and societies. We combine news,
-analysis, and historical education to help readers stay informed about both
-current events and the past events that explain today's world.
-</p><p>
-In addition to breaking news, Real Life International explores major historical
-moments such as the World Wars, the American Revolution, and other global
-conflicts and turning points that changed history. Through detailed articles
-and educational content, our platform helps readers understand the deeper
-context behind major global developments.
-</p><p>
-Real Life International believes that knowledge empowers people. By providing
-accurate reporting, thoughtful analysis, and historical insight, we aim to
-inform, educate, and inspire readers across the world.
-</p></section><!-- FACEBOOK NEWS FEED --><section class="facebook-news"><h2>Latest News</h2><div class="fb-page"
+<!-- Hero Section -->
+<section class="hero">
+<h2>Global News and Analysis</h2>
+<p>Real Life International reports local and international events, political developments, conflicts, and major stories shaping our world.</p>
+</section>
+
+<!-- Dynamic History Articles -->
+<section class="container">
+<h2>History Highlights</h2>
+<div id="articles-grid" class="grid"></div>
+</section>
+
+<script>
+// Load articles dynamically from JSON
+fetch('articles.json')
+  .then(response => response.json())
+  .then(data => {
+    const grid = document.getElementById('articles-grid');
+    data.forEach(article => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${article.image}" alt="${article.title}">
+        <h3>${article.title}</h3>
+        <p>${article.description}</p>
+        <a href="${article.link}">Read Full Story</a>
+      `;
+      grid.appendChild(card);
+    });
+  })
+  .catch(err => console.error('Failed to load articles:', err));
+</script>
+
+<!-- TikTok Feed -->
+<section class="container">
+<h2>Follow Us on TikTok</h2>
+<p>@reallifeinternational</p>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@reallifeinternational" data-unique-id="reallifeinternational" style="max-width: 500px; margin:auto;"></blockquote>
+<script async src="https://www.tiktok.com/embed.js"></script>
+</section>
+
+<!-- Facebook Feed -->
+<section class="container">
+<h2>Latest News</h2>
+<div class="fb-page"
 data-href="https://www.facebook.com/RealLifeinternational"
 data-tabs="timeline"
 data-width="500"
@@ -166,25 +101,17 @@ data-small-header="false"
 data-adapt-container-width="true"
 data-hide-cover="false"
 data-show-facepile="true">
-</div></section><div id="fb-root"></div><script async defer crossorigin="anonymous"
+</div>
+</section>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
 src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
-</script><!-- HISTORY ARTICLES --><section class="history-section"><h2>History Articles</h2><div class="article"><a href="articles/history-world-war-1.html">World War I – How the Great War Began and Ended</a>
+</script>
 
-<p>
-World War I began in 1914 after the assassination of Archduke Franz Ferdinand.
-The conflict involved major world powers and lasted until 1918,
-reshaping Europe and the global political order.
-</p></div><div class="article"><a href="articles/history-world-war-2.html">World War II – The Largest Conflict in Human History</a>
+<footer>
+<p>© 2026 Real Life International</p>
+</footer>
 
-<p>
-World War II began in 1939 when Germany invaded Poland.
-The war involved nations across the globe and ended in 1945
-after the defeat of Nazi Germany and Imperial Japan.
-</p></div><div class="article"><a href="articles/history-american-revolution.html">American Revolution – The Birth of the United States</a>
-
-<p>
-The American Revolution (1775-1783) was the struggle of the
-thirteen American colonies to gain independence from Britain,
-leading to the creation of the United States of America.
-</p></div></section><footer><p>© 2026 Real Life International</p></footer></body>
+</body>
 </html>
