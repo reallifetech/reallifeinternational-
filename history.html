@@ -4,25 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>History - Real Life International</title>
-
 <style>
-body {font-family: Arial, sans-serif; margin:0; background:#111; color:white; line-height:1.7;}
-header {background:black; padding:25px; text-align:center; color:red;}
-nav {background:red; padding:12px; text-align:center;}
-nav a {color:white; text-decoration:none; margin:0 15px; font-weight:bold;}
-nav a:hover {text-decoration:underline;}
-.container {max-width:1100px; margin:auto; padding:20px;}
-h1, h2 {color:red; text-align:center;}
-.grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; margin-top:30px;}
-.card {background:#1a1a1a; padding:15px; border-left:5px solid red; border-radius:6px;}
-.card img {width:100%; border-radius:6px;}
-.card h3 {color:red; margin-top:10px;}
-.card p {margin:10px 0;}
-.card a {color:white; font-weight:bold; text-decoration:none;}
-.card a:hover {color:red;}
-footer {background:black; color:red; text-align:center; padding:20px; margin-top:40px;}
+body{font-family:Arial,sans-serif;margin:0;background:#111;color:white;}
+header{background:black;color:red;padding:25px;text-align:center;}
+nav{background:red;padding:12px;text-align:center;}
+nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+.hero{padding:50px;text-align:center;background:#1a1a1a;}
+.hero h2{color:red;margin-bottom:15px;}
+.hero p{margin-bottom:15px;line-height:1.7;}
+.articles-container{max-width:1100px;margin:30px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+.article-card{background:#1a1a1a;padding:15px;border-radius:8px;transition:transform 0.2s;}
+.article-card:hover{transform:scale(1.03);}
+.article-card img{width:100%;height:auto;border-radius:6px;margin-bottom:10px;}
+.article-card h3{color:red;margin-bottom:10px;}
+.article-card p{line-height:1.6;margin-bottom:10px;}
+.read-more{display:inline-block;padding:8px 12px;background:red;color:white;text-decoration:none;border-radius:4px;}
+.read-more:hover{background:#ff1a1a;}
+footer{background:black;color:red;text-align:center;padding:25px;margin-top:40px;}
 </style>
-
 </head>
 <body>
 
@@ -37,48 +37,46 @@ footer {background:black; color:red; text-align:center; padding:20px; margin-top
 </nav>
 </header>
 
-<div class="container">
+<section class="hero">
+<h2>History Articles</h2>
+<p>Explore in-depth historical stories, from revolutions to world wars and global conflicts. Click on any article to read the full story.</p>
+</section>
 
-<h1>History Articles</h1>
-<p style="text-align:center;">Explore in-depth stories about major historical events that shaped our world.</p>
+<section class="articles-container">
 
-<div class="grid">
+<!-- American Revolution -->
+<div class="article-card">
+<img src="images/american-revolution.jpg" alt="American Revolution">
+<h3>The American Revolution</h3>
+<p>The thirteen colonies’ struggle for independence from Britain, the Declaration of Independence, and the revolutionary battles that shaped a new nation.</p>
+<a href="articles/history-american-revolution.html" class="read-more">Read More</a>
+</div>
 
 <!-- World War I -->
-<div class="card">
+<div class="article-card">
 <img src="images/world-war-1.jpg" alt="World War I">
-<h3>World War I – The Great War</h3>
-<p>Discover the causes, battles, and aftermath of the First World War, which reshaped Europe and the world.</p>
-<a href="articles/history-world-war-1.html">Read Full Story</a>
+<h3>World War I</h3>
+<p>The Great War, causes, major battles, technological innovations, and its lasting impact on global politics and society.</p>
+<a href="articles/history-world-war-1.html" class="read-more">Read More</a>
 </div>
 
 <!-- World War II -->
-<div class="card">
+<div class="article-card">
 <img src="images/world-war-2.jpg" alt="World War II">
-<h3>World War II – The Deadliest War</h3>
-<p>Learn about the rise of Nazi Germany, the global conflict, and how the world was forever changed by World War II.</p>
-<a href="articles/history-world-war-2.html">Read Full Story</a>
-</div>
-
-<!-- American Revolution -->
-<div class="card">
-<img src="images/american-revolution.jpg" alt="American Revolution">
-<h3>The American Revolution</h3>
-<p>Explore how thirteen colonies fought for independence from Britain and the birth of a new nation.</p>
-<a href="articles/history-american-revolution.html">Read Full Story</a>
+<h3>World War II</h3>
+<p>The deadliest conflict in human history, key battles, the Holocaust, Allied victory, and how WWII reshaped the modern world.</p>
+<a href="articles/history-world-war-2.html" class="read-more">Read More</a>
 </div>
 
 <!-- Iran–Israel Conflict -->
-<div class="card">
-<img src="images/iran-israel-war.jpg" alt="Iran Israel Conflict">
+<div class="article-card">
+<img src="images/iran-israel-war.jpg" alt="Iran–Israel Conflict">
 <h3>Iran–Israel Conflict</h3>
-<p>Understand the ongoing tensions, historical background, and current situation between Iran and Israel.</p>
-<a href="articles/iran-israel-war.html">Read Full Story</a>
+<p>The historical, political, and military tensions between Iran and Israel, proxy wars, regional conflicts, and global implications.</p>
+<a href="articles/iran-israel-war.html" class="read-more">Read More</a>
 </div>
 
-</div>
-
-</div>
+</section>
 
 <footer>
 <p>© 2026 Real Life International</p>
