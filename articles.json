@@ -1,29 +1,26 @@
 [
-{
-"title":"The American Revolution",
-"description":"The struggle for independence of the thirteen American colonies against British rule.",
-"image":"images/american-revolution.jpg",
-"link":"articles/history-american-revolution.html"
-},
-
-{
-"title":"World War I",
-"description":"The Great War that reshaped Europe and led to the fall of empires.",
-"image":"images/world-war-1.jpg",
-"link":"articles/history-world-war-1.html"
-},
-
-{
-"title":"World War II",
-"description":"The deadliest war in human history involving more than 30 countries.",
-"image":"images/world-war-2.jpg",
-"link":"articles/history-world-war-2.html"
-},
-
-{
-"title":"Iran–Israel Conflict",
-"description":"Modern tensions between Iran and Israel shaping Middle East geopolitics.",
-"image":"images/iran-israel-war.jpg",
-"link":"articles/iran-israel-war.html"
-}
+  {
+    "title":"The American Revolution",
+    "description":"The struggle for independence of the thirteen American colonies against British rule.",
+    "image":"images/american-revolution.jpg",
+    "link":"articles/history-american-revolution.html"
+  },
+  {
+    "title":"World War I",
+    "description":"The Great War that reshaped Europe and led to the fall of empires.",
+    "image":"images/world-war-1.jpg",
+    "link":"articles/history-world-war-1.html"
+  },
+  {
+    "title":"World War II",
+    "description":"The deadliest war in human history, involving over 30 countries.",
+    "image":"images/world-war-2.jpg",
+    "link":"articles/history-world-war-2.html"
+  },
+  {
+    "title":"Iran–Israel Conflict",
+    "description":"Modern tensions between Iran and Israel shaping Middle East geopolitics.",
+    "image":"images/iran-israel-war.jpg",
+    "link":"articles/iran-israel-war.html"
+  }
 ]
